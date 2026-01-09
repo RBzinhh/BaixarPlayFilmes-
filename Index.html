@@ -1,0 +1,104 @@
+<!DOCTYPE html><html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PlayFilmes+ | Download Oficial</title>
+  <meta name="description" content="Baixe o aplicativo PlayFilmes+ diretamente do site oficial." />  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(135deg, #0f0f0f, #1c1c1c);
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+    .container {
+      background: #111;
+      padding: 30px;
+      border-radius: 18px;
+      max-width: 420px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+    }
+    .logo {
+      width: 120px;
+      height: 120px;
+      object-fit: contain;
+      margin-bottom: 15px;
+    }
+    h1 {
+      margin-bottom: 8px;
+      font-size: 26px;
+    }
+    p {
+      font-size: 14px;
+      color: #ccc;
+      margin-bottom: 25px;
+    }
+    .btn {
+      display: block;
+      background: #e50914;
+      color: #fff;
+      padding: 14px;
+      border-radius: 12px;
+      font-size: 16px;
+      font-weight: bold;
+      margin-bottom: 15px;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .btn:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 15px rgba(229,9,20,0.6);
+    }
+    .btn.disabled {
+      background: #555;
+      cursor: not-allowed;
+      box-shadow: none;
+    }
+    .info {
+      font-size: 12px;
+      color: #888;
+      margin-top: 15px;
+    }
+    footer {
+      margin-top: 20px;
+      font-size: 11px;
+      color: #666;
+    }
+  </style></head>
+<body>
+  <div class="container">
+    <img src="logoapp.png" alt="PlayFilmes+" class="logo" />
+    <h1>PlayFilmes+</h1>
+    <p>Baixe o app oficial diretamente do site.</p><!-- LINK DIRETO DO APK (LOCAL OU URL) -->
+<a id="downloadBtn" class="btn" href="https://SEU-LINK-AQUI/PlayFilmesPlus.apk" download>
+  ⬇ Baixar APK
+</a>
+
+<div class="info" id="status"></div>
+
+<footer>
+  © 2026 PlayFilmes+ • Todos os direitos reservados
+</footer>
+
+  </div>  <script>
+    // 🔍 Detectar Android
+    const isAndroid = /Android/i.test(navigator.userAgent);
+    const statusEl = document.getElementById('status');
+    const btn = document.getElementById('downloadBtn');
+
+    if (!isAndroid) {
+      btn.classList.add('disabled');
+      btn.removeAttribute('href');
+      btn.removeAttribute('download');
+      statusEl.innerText = 'Download disponível apenas para dispositivos Android.';
+    } else {
+      statusEl.innerText = 'Compatível com Android 7 ou superior.';
+    }
+  </script></body>
+</html>
